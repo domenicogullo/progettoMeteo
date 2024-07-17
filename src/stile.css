@@ -1,0 +1,44 @@
+body{
+    background-color:rgb(230, 243, 254);
+}
+
+.Container{
+    margin-top:30px;
+}
+
+.Typography{
+    margin-bottom: 10px !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    line-height: 2 !important;
+}
+
+.description{
+    font-family: 'Times New Roman', Times, serif !important;
+    text-transform: capitalize;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+
+.Card{
+    border: 1px solid rgb(255, 102, 0);
+    background-color:rgb(230, 243, 254) !important;
+}
+
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}

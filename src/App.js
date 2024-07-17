@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import FormMeteo from './componenti/FormMeteo';
+import ShowWeather from "./componenti/ShowWeather";
+import {Container, Typography} from '@mui/material';
+import './stile.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    const [datiMeteo,setDatiMeteo] = useState(null);
+
+   return (
+
+    <Container className='Container'>
+        <Typography className='title' variant="h4" gutterBottom>Weather App</Typography>
+        <FormMeteo setDatiMeteo = {setDatiMeteo}/>
+        {datiMeteo && <ShowWeather datiMeteo={datiMeteo}/>}
+
+        <div className='img-container'>
+        <img src='/weatherPhoto.jpg' alt='WeatherPhoto'/>
+        </div>
+        
+    </Container>
+
   );
 }
 
