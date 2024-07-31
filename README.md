@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# README file per l'app meteo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduzione al progetto 
 
-## Available Scripts
+Il progetto rappresenta un'applicazione che permette all'utente di ottenere informazioni sul meteo di una località a partire dal CAP inserito.
 
-In the project directory, you can run:
+## Stack tecnologico utilizzato
 
-### `npm start`
+1 - React, 
+2 - Material-UI,
+3 - Javascript,
+4 - HTML / CSS,
+5 - React Hooks,
+6 - Node.js & npm (Node Package Manager),
+7 - Axios,
+8 - Weather API (Zippopotam & Openweathermap)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Struttura del progetto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+L'applicazione presenta una singola pagina principale nella quale è inserito una casella di testo che richiede all'utente di inserire il CAP della località sulla quale vuole ottenere le informazioni metereologiche. In seguito all'insrerimento di un CAP valido, la pagina visualizza svariate informazioni sul meteo della località (temperatura misurata, temperatura percepita, velocità del vento, umidità, orario di alba e tramonto e descrizione generale del meteo). 
+Il progetto è composto principalmente da 2 componenti: FormMeteo.js relativo alla parte della pagina per l'inserimento del CAP, e ShowWeather.js che invece è il componente di visualizzazione dei dati meteo.
+Le funzioni di chiamata delle API sono contenute in file esterni (Zippopotam.js & ServizioMeteo.js) entrambe esportate in seguito all'interno di FormMeteo.js
 
-### `npm test`
+Il layout della pagina è gestito dalla libreria Material-UI (MUI) attraverso l'implementazione di un componente TextField per l'inserimento del CAP e di un componente Card per la visualizzare i dati sul meteo in formato "rialzato".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+----------------------------------------------------------------------------------
 
-### `npm run build`
+## Prerequisiti
+-Node.js 
+-npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Procedimento di avvio
+1 - Dopo aver clonato la repository da git attraverso il comando git clone url_repository, 
+spostarsi nella directory del progetto appena clonata tramite il comando cd nome_directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2 - Installare le varie dipendenze necessarie per il corretto avvio dell'applicazione attraverso il comando npm install che andrà ad installare tutte le librerie e pacchetti necessari 
+(@mui/material, @emotion/react, @emotion/styled, Axios)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3 - Avviare l'applicazione attraverso il comando npm start che procederà all'apertura sul browser predefinito dal sistema in utilizzo. 
